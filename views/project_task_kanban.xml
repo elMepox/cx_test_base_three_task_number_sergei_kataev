@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="project_task_number_kanban_view" model="ir.ui.view">
+        <field name="name">project.task.number</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <span style="margin-right: 5px">
+                    [<field name="task_number"/>]
+                </span>
+            </xpath>
+        </field>
+    </record>
+</odoo>

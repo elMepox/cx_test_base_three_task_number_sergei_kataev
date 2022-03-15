@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="project_task_number" model="ir.sequence">
+        <field name="name">Task Number</field>
+        <field name="code">project.task</field>
+        <field name="active">TRUE</field>
+        <field name="number_increment">1</field>
+    </record>
+</odoo>

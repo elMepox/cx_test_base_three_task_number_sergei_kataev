@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+        <record id="project_task_search_with_number" model="ir.ui.view">
+        <field name="name">project.task.search.number</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_search_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="replace">
+                <field name="name" filter_domain="['|', ('name', 'ilike', self), ('task_number','ilike',self)]" string="Task"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
